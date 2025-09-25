@@ -76,45 +76,39 @@ export function ProcessSection() {
                     </p>
                 </AnimatedGroup>
 
-                <div className="space-y-12">
-                    {processSteps.map((step, index) => (
-                        <AnimatedGroup 
-                            key={index}
-                            variants={{
-                                ...transitionVariants,
-                                container: {
-                                    visible: {
-                                        transition: {
-                                            staggerChildren: 0.1,
-                                            delayChildren: 0.2 + (index * 0.1),
-                                        },
-                                    },
-                                },
-                            }}
-                            className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12"
-                        >
-                            <div className="flex-shrink-0">
-                                <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
-                                    <step.icon className="w-8 h-8 text-primary" />
-                                </div>
-                                <div className="text-center lg:text-left">
-                                    <div className="text-6xl font-bold text-primary/20 mb-2">
-                                        {step.symbol}
-                                    </div>
-                                    <div className="text-sm font-medium text-primary">
-                                        Step {step.step}
+                <div className="relative mx-auto max-w-4xl">
+                    <div className="pointer-events-none absolute left-9 top-0 hidden h-full w-px bg-gradient-to-b from-primary/20 via-primary/10 to-transparent lg:block" />
+
+                    <div className="space-y-10">
+                        {processSteps.map((step, index) => (
+                            <AnimatedGroup
+                                key={index}
+                                variants={transitionVariants}
+                                className="group flex items-start gap-4 lg:gap-6"
+                            >
+                                {/* Timeline badge */}
+                                <div className="relative z-[1]">
+                                    <div className="grid size-14 place-items-center rounded-2xl bg-gradient-to-b from-primary/15 to-primary/5 ring-1 ring-primary/20 shadow-sm">
+                                        <div className="grid size-10 place-items-center rounded-xl bg-background ring-1 ring-primary/30">
+                                            <step.icon className="size-5 text-primary" />
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <div className="flex-1 text-center lg:text-left">
-                                <h3 className="text-2xl font-semibold mb-4">{step.title}</h3>
-                                <p className="text-muted-foreground leading-relaxed text-lg">
-                                    {step.description}
-                                </p>
-                            </div>
-                        </AnimatedGroup>
-                    ))}
+
+                                {/* Card */}
+                                <div className="flex-1 rounded-2xl border bg-card/50 p-6 shadow-sm backdrop-blur supports-[backdrop-filter]:bg-card/60 transition-all duration-300 hover:shadow-md">
+                                    <div className="flex items-center justify-between">
+                                        <div className="text-xs font-medium text-primary">Step {step.step}</div>
+                                        <div className="text-xl leading-none text-primary/20">{step.symbol}</div>
+                                    </div>
+                                    <h3 className="mt-2 text-xl font-semibold">{step.title}</h3>
+                                    <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                                        {step.description}
+                                    </p>
+                                </div>
+                            </AnimatedGroup>
+                        ))}
+                    </div>
                 </div>
 
                 <AnimatedGroup variants={transitionVariants} className="text-center mt-16">

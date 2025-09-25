@@ -3,8 +3,9 @@ import React from 'react'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { Star } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { Variants } from 'framer-motion'
 
-const transitionVariants = {
+const transitionVariants: { item: Variants } = {
     item: {
         hidden: {
             opacity: 0,
