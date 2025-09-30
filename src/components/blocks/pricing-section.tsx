@@ -177,7 +177,7 @@ export function PricingSection() {
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
             {activeTab === "maintenance"
-              ? "React Your Way Maintenance Plans"
+              ? "Sitefy Maintenance Plans"
               : "React Your Way Development Plans"}
           </p>
           <p className="text-muted-foreground max-w-4xl mx-auto mb-8">
