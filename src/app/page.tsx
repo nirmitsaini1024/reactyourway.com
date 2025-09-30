@@ -10,12 +10,18 @@ export default function Home() {
   return (
    <div>
     <HeroSection />
-    <ServicesSection />
-    <ProcessSection />
-    <FeaturedProjectsSection />
-    <BentoGridDemo />
-    <PricingSection />
-    <Featured_05 />
+    <section id="services"><ServicesSection /></section>
+    <section id="process"><ProcessSection /></section>
+    <section id="work"><FeaturedProjectsSection /></section>
+    <section id="benefits">
+     <div className="mx-auto max-w-7xl px-6 text-center">
+      <h2 className="text-4xl md:text-5xl font-bold mb-6">Why work with us</h2>
+      <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">Fast launches, custom builds, performance and SEO baked in.</p>
+     </div>
+     <BentoGridDemo />
+    </section>
+    <section id="pricing"><PricingSection /></section>
+    <section id="contact"><Featured_05 /></section>
    </div>
   );
 }

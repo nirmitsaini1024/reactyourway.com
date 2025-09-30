@@ -111,18 +111,6 @@ export function ProcessSection() {
                         ))}
                     </div>
                 </div>
-
-                <AnimatedGroup variants={transitionVariants} className="text-center mt-16">
-                    <Button size="lg" className="rounded-xl px-8 py-6 text-lg" asChild>
-                        <Link href="https://calendly.com/nirmitsaini24/new-meeting" target="_blank" rel="noopener noreferrer">
-                            Start your project
-                            <ArrowRight className="ml-2 w-5 h-5" />
-                        </Link>
-                    </Button>
-                    <p className="text-muted-foreground mt-4">
-                        Let's transform your ideas into reality
-                    </p>
-                </AnimatedGroup>
             </div>
         </section>
     )

@@ -9,12 +9,12 @@ import { cn } from "@/lib/utils";
 
 export default function Featured_05() {
   return (
-    <section className="relative w-full mx-auto overflow-hidden rounded-3xl bg-background border border-gray-200/10 shadow-md px-6 py-16 md:px-16 md:py-24 mt-24">
+    <section className="relative w-full mx-auto overflow-hidden rounded-3xl bg-background border border-gray-200 dark:border-white/10 shadow-md px-6 py-16 md:px-16 md:py-24 mt-24">
       <div className="flex flex-col-reverse items-center justify-between gap-10 md:flex-row">
         <div className="z-10 max-w-xl text-left">
-          <h1 className="text-3xl font-normal text-white">
+          <h1 className="text-3xl font-normal text-gray-900 dark:text-white">
             Build with <span className="text-primary">Sitefy</span>{" "}
-            <span className="text-gray-400">Ship fast with elegant, scalable UI and great DX.</span>
+            <span className="text-gray-600 dark:text-gray-400">Ship fast with elegant, scalable UI and great DX.</span>
           </h1>
           <Button variant="default" className="mt-6 inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-semibold shadow-md shadow-black/20" asChild>
             <Link href="https://calendly.com/nirmitsaini24/new-meeting" target="_blank" rel="noopener noreferrer">
