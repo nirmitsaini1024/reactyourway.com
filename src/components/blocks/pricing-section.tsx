@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { Check, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -187,7 +188,7 @@ export function PricingSection() {
 
           {/* Tabs */}
            <div className="flex justify-center mb-8">
-             <div className="bg-muted/60 p-1 rounded-lg flex ring-1 ring-border/50">
+             <div className="bg-background p-1 rounded-lg flex ring-1 ring-border/50">
                <button
                  onClick={() => {
                    setActiveTab("development");
@@ -197,7 +198,7 @@ export function PricingSection() {
                 className={cn(
                   "px-6 py-3 rounded-md text-sm font-medium transition-all duration-200",
                   activeTab === "development"
-                    ? "bg-background text-foreground shadow-sm"
+                    ? "bg-muted/20 text-foreground shadow-sm"
                     : "text-muted-foreground hover:text-foreground"
                 )}
               >
@@ -212,7 +213,7 @@ export function PricingSection() {
                 className={cn(
                   "px-6 py-3 rounded-md text-sm font-medium transition-all duration-200",
                   activeTab === "maintenance"
-                    ? "bg-background text-foreground shadow-sm"
+                    ? "bg-muted/20 text-foreground shadow-sm"
                     : "text-muted-foreground hover:text-foreground"
                 )}
               >
@@ -241,7 +242,7 @@ export function PricingSection() {
                 }}
                  className={cn(
                    "relative border rounded-2xl p-8 h-full transition-all duration-300 cursor-pointer focus:outline-none hover:-translate-y-2 hover:shadow-xl",
-                   "bg-gradient-to-b from-background to-muted/30",
+                   "bg-background",
                    plan.popular && "border-primary ring-2 ring-primary/30 shadow-lg",
                    selectedPlan === index && "ring-2 ring-primary/60 border-primary bg-primary/5"
                  )}
@@ -282,20 +283,19 @@ export function PricingSection() {
                   ))}
                 </ul>
 
-                 <Button
+                <Button
                   onClick={(e) => {
                     e.stopPropagation();
                   }}
-                  disabled={selectedPlan !== index}
-                   className={cn(
-                     "w-full",
-                     selectedPlan === index
-                       ? "bg-primary hover:bg-primary/90 text-primary-foreground"
-                       : "bg-muted text-muted-foreground cursor-not-allowed"
-                   )}
+                  className={cn(
+                    "w-full bg-primary hover:bg-primary/90 text-primary-foreground"
+                  )}
                   size="lg"
+                  asChild
                 >
-                  {plan.cta}
+                  <Link href="https://calendly.com/nirmitsaini24/new-meeting" target="_blank" rel="noopener noreferrer">
+                    {plan.cta}
+                  </Link>
                 </Button>
               </div>
             </AnimatedGroup>
@@ -312,6 +312,13 @@ export function PricingSection() {
               Contact us for personalized pricing.
             </span>
           </p>
+          <div className="mt-8">
+            <Button asChild size="lg" className="rounded-xl">
+              <Link href="https://calendly.com/nirmitsaini24/new-meeting" target="_blank" rel="noopener noreferrer">
+                Book a call 
+              </Link>
+            </Button>
+          </div>
         </AnimatedGroup>
       </div>
     </section>

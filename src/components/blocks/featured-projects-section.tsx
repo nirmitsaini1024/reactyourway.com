@@ -28,46 +28,39 @@ const transitionVariants = {
 
 const projects = [
     {
-        title: "EcoTech Solutions",
-        description: "Sustainable technology company website featuring interactive product showcases and client testimonials.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-        category: "Corporate Website",
-        href: "#ecotech"
+        title: "Supernal Aero",
+        description: "Elegant marketing site showcasing aerospace innovation and product narrative.",
+        image: "https://nirmitsaini.10xdevs.in/screenzy-1726210398661.webp",
+        category: "Website",
+        href: "https://supernalaero.10xdevs.in/"
     },
     {
-        title: "FoodieHub",
-        description: "Modern restaurant website with online ordering system, menu management, and customer reviews.",
-        image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
-        category: "Restaurant Website",
-        href: "#foodiehub"
+        title: "Zentry",
+        description: "High‑fidelity landing experience with smooth animations and rich interactions.",
+        image: "https://nirmitsaini.10xdevs.in/Zentry.webp",
+        category: "Website",
+        href: "https://zentry.10xdevs.in/"
     },
     {
-        title: "AgroFinance",
-        description: "Agricultural investment platform website with secure payment integration and investor dashboard.",
-        image: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&h=400&fit=crop",
-        category: "FinTech Website",
-        href: "#agrofinance"
+        title: "Astute AI",
+        description: "Product site for an AI tool with crisp sections and performance‑first build.",
+        image: "https://nirmitsaini.10xdevs.in/astute.webp",
+        category: "Website",
+        href: "https://astuteai.10xdevs.in/"
     },
     {
-        title: "ContractPro",
-        description: "Legal document automation platform enabling small businesses to create accurate contracts in minutes.",
-        image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=400&fit=crop",
-        category: "SaaS Platform",
-        href: "#contractpro"
+        title: "AKQA Clone",
+        description: "Modern agency-style clone focusing on typography, motion, and grid systems.",
+        image: "https://nirmitsaini.10xdevs.in/akqa.webp",
+        category: "Website",
+        href: "https://akqa-five.vercel.app/"
     },
     {
-        title: "StudentLife",
-        description: "Comprehensive student portal website for college management with event scheduling and resource sharing.",
-        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop",
-        category: "Educational Platform",
-        href: "#studentlife"
-    },
-    {
-        title: "ParkSmart",
-        description: "Smart parking management website with QR code generation and real-time availability tracking.",
-        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
-        category: "Smart City Solution",
-        href: "#parksmart"
+        title: "10xDevs Blog",
+        description: "Ultimate blogging SaaS setup — fast to launch, easy to manage.",
+        image: "https://nirmitsaini.10xdevs.in/screenzy-1726205184216.webp",
+        category: "Blog Platform",
+        href: "https://blog.10xdevs.in/"
     }
 ]
 
@@ -130,14 +123,9 @@ export function FeaturedProjectsSection() {
                                     </p>
                                     
                                     <div className="flex gap-3">
-                                        <Button variant="outline" size="sm" asChild>
-                                            <Link href={project.href}>
-                                                Case Study
-                                            </Link>
-                                        </Button>
                                         <Button variant="ghost" size="sm" asChild>
-                                            <Link href={project.href} className="flex items-center">
-                                                View Details
+                                            <Link href={project.href} target="_blank" rel="noopener noreferrer" className="flex items-center">
+                                                Visit Website
                                                 <ExternalLink className="ml-1 w-3 h-3" />
                                             </Link>
                                         </Button>

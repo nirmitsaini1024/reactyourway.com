@@ -1,5 +1,6 @@
-'use client'
+"use client"
 import React from 'react'
+import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { AnimatedGroup } from '@/components/ui/animated-group'
 import { ArrowRight, MessageCircle, Palette, Code, TestTube, Rocket } from 'lucide-react'
@@ -65,7 +66,7 @@ const processSteps = [
 
 export function ProcessSection() {
     return (
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-16 md:py-24 bg-background">
             <div className="mx-auto max-w-7xl px-6">
                 <AnimatedGroup variants={transitionVariants} className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -112,9 +113,11 @@ export function ProcessSection() {
                 </div>
 
                 <AnimatedGroup variants={transitionVariants} className="text-center mt-16">
-                    <Button size="lg" className="rounded-xl px-8 py-6 text-lg">
-                        Start your project
-                        <ArrowRight className="ml-2 w-5 h-5" />
+                    <Button size="lg" className="rounded-xl px-8 py-6 text-lg" asChild>
+                        <Link href="https://calendly.com/nirmitsaini24/new-meeting" target="_blank" rel="noopener noreferrer">
+                            Start your project
+                            <ArrowRight className="ml-2 w-5 h-5" />
+                        </Link>
                     </Button>
                     <p className="text-muted-foreground mt-4">
                         Let's transform your ideas into reality

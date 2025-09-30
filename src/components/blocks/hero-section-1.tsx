@@ -76,6 +76,7 @@ export function HeroSection() {
                 width="3276"
                 height="4095"
               />
+              
             </AnimatedGroup>
             <div
               aria-hidden

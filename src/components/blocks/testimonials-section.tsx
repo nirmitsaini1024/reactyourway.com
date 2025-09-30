@@ -78,7 +78,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
     return (
-        <section className="py-16 md:py-24 bg-muted/30">
+        <section className="py-16 md:py-24 bg-background">
             <div className="mx-auto max-w-7xl px-6">
                 <AnimatedGroup variants={transitionVariants} className="text-center mb-16">
                     <h2 className="text-4xl md:text-5xl font-bold mb-6">
